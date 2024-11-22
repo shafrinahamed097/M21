@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('firstName', 50);
             $table->string('lastName', 50);
             $table->string('email', 50)->unique();
-            $table->string('mobile');
-            $table->string('password', 50);
-            $table->string('otp', 10);
-            $table->string('created_at')->useCurrent();
-            $table->string('updated_at')->useCurrent()->useCurrentOnUpdate();
+            $table->string('mobile',50)->unique();
+            $table->string('password',50);
+            $table->string('otp',10);
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
