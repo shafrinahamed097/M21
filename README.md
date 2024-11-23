@@ -29,3 +29,9 @@ PHASE 01:
   05. Allow user to reset password - Password Recover Stage 03 (end point)
   06. Allow user to get profile details (end point)
   07. Allow user to update profile details (end point)
+
+
+PHASE 02:
+  01. Planning Product Category Table By Profile
+  02. Category Managing Back-End Development
+  03. Category Managing Front-End Development  
