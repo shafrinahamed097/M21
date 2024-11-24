@@ -35,3 +35,11 @@ PHASE 02:
   01. Planning Product Category Table By Profile
   02. Category Managing Back-End Development
   03. Category Managing Front-End Development  
+
+
+  *Category-Controller:
+    - Category Page
+    - Category List
+    - Category Create
+    - Category By ID
+    - Category Update
