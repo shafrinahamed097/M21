@@ -43,3 +43,4 @@ PHASE 02:
     - Category Create
     - Category By ID
     - Category Update
+    - Category Delete
