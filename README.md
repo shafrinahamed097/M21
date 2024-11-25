@@ -16,6 +16,12 @@ Basic Requirement:
 
 AGILE - - Project Management Approach
 
+AGILE PROS:
+ 01. High flexibility of the project and the ability to adapt projects frequently.
+ 02. High customer satisfaction over the development process.
+ 03. Constant interaction among stakeholders that simulates creativity and leads to better results.
+ 04. Continuous quality assurance and attention to detail.
+
 PHASE 01:
  01. Planning User Profile table.
  02. User Profile Auth Back-End Development.
@@ -45,5 +51,11 @@ PHASE 02:
     - Category Update
     - Category Delete
 
-------Front End Developer------
-    -  
+
+
+Phase 01: Face the challenges of agile & take advantages:
+   01. We decide to use users primary key "id" for further database works.
+   02. We decide to use redirect unauthorised user form middleware.
+   03. Use decide to use to TokenVerificationMidlleware for data end point and also page level browsing.
+   04. JWT Token managing through web cookies. 
+    
