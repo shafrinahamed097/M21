@@ -19,6 +19,7 @@ Route::post("/verify-otp",[UserController::class, 'VerifyOTP']);
 Route::post("/reset-password",[UserController::class, 'ResetPassword']);
 
 // Page Routes
+Route::get("/",[HomeController::class, 'HomePage']);
 Route::get("/userLogin",[UserController::class, 'LoginPage']);
 Route::get("/userRegistration",[UserController::class, 'RegistrationPage']);
 Route::get("/sendOtp",[UserController::class, 'SendOtpPage']);
@@ -27,7 +28,6 @@ Route::get("/resetPassword",[UserController::class, 'ResetPasswordPage']);
 
 
 // Category API
-
 Route::post("/create-category",[CategoryController::class,'CategoryCreate'])->middleware([TokenVerificationMiddleware::class]);
 Route::post("/list-category",[CategoryController::class,'CategoryList'])->middleware([TokenVerificationMiddleware::class]);
 Route::post("/delete-category",[CategoryController::class,'CategoryDelete'])->middleware([TokenVerificationMiddleware::class]);
