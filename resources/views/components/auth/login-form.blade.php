@@ -45,7 +45,7 @@
             hideLoader();
            
             if(res.status===200 && res.data['status']==='success'){
-                window.location.href="/";
+                window.location.href="/dashboard";
 
 
             }

@@ -9,7 +9,7 @@ class CategoryController extends Controller
 {
 
     function CategoryPage(){
-        return view('pages.category.category-page');
+        return view('pages.dashboard.category-page');
     }
     function CategoryCreate(Request $request){
         $user_id=$request->header('id');
