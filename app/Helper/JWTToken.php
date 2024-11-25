@@ -30,6 +30,7 @@ class JWTToken
             'exp'=>time()+60*20,
             'userEmail'=>$userEmail,
             'userID'=>'0'
+            
         ];
         return JWT::encode($payload,$key,'HS256');
     }
