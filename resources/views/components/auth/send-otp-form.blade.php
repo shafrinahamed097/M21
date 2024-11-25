@@ -16,5 +16,28 @@
 </div>
 
 <script>
+   async function VerifyEmail(){
+        let email = document.getElementById('email').value;
+
+        if(email.length === 0){
+            errorToast("Email is required");
+        }
+        else{
+            showLoad();
+            let res = await axios.post('/send-otp',{email:email});
+            hideLoader();
+
+            if(res.status===200 && res.data['status']){
+                successToast(res.data['message'])
+                setTimeout(function (){
+                    window.location.href="/verify-otp";
+                },100)
+
+            }else{
+                errorToast(res.data['message']);
+            }
+        }
+
+    }
     
 </script>
