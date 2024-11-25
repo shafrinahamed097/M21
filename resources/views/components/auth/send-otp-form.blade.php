@@ -20,21 +20,23 @@
         let email = document.getElementById('email').value;
 
         if(email.length === 0){
-            errorToast("Email is required");
+            errorToast("Please enter your email address");
         }
         else{
-            showLoad();
+            showLoader();
             let res = await axios.post('/send-otp',{email:email});
             hideLoader();
 
-            if(res.status===200 && res.data['status']){
+            if(res.status===200 && res.data['status']==='success'){
                 successToast(res.data['message'])
+                sessionStorage.setItem('email',email);
                 setTimeout(function (){
-                    window.location.href="/verify-otp";
+                    window.location.href="/verifyOtp";
                 },100)
 
-            }else{
-                errorToast(res.data['message']);
+            }
+            else{
+                errorToast(res.data['message'])
             }
         }
 
