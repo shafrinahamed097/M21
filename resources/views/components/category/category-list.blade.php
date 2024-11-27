@@ -38,6 +38,20 @@ async function getList(){
     showLoader();
     let res=await axios.get("/list-category");
     hideLoader();
+
+    let tableList =$('#tableList');
+    let tableData = $('#tableData');
+
+    res.data.forEach(function (item, index){
+        let row = `<tr>
+        <td>${index+1}</td>
+        <td></td>
+        <td></td>
+        <tr>`
+
+        tableList.append(row)
+
+    });
 }
 
 
