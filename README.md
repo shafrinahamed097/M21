@@ -59,3 +59,13 @@ Phase 01: Face the challenges of agile & take advantages:
    03. Use decide to use to TokenVerificationMidlleware for data end point and also page level browsing.
    04. JWT Token managing through web cookies. 
     
+
+_______________________________________________________________________________________
+
+
+Phase 02:
+ 01. Planning Product Category Table by Profile
+ 02. Category Managing Back-End Development
+ 03. Category Managing Front-End Development
+
+ 
