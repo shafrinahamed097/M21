@@ -38,18 +38,28 @@ async function getList(){
     showLoader();
     let res=await axios.get("/list-category");
     hideLoader();
-
-    let tableList =$('#tableList');
-    let tableData = $('#tableData');
+    
+    // JQuery Style
+    let tableList =$("#tableList");
+    let tableData = $("#tableData");
 
     res.data.forEach(function (item, index){
         let row = `<tr>
         <td>${index+1}</td>
-        <td></td>
-        <td></td>
-        <tr>`
+        <td class="text-dark">${item['name']}</td>
+        <td>
+        <button class="btn text-decoration-underline bg-warning text-dark btb-sm btn-outline-warning">Edit</button>
+        <button class="btn text-decoration-underline bg-danger text-white btb-sm btn-outline-danger">Delete</button>
+        </td>
+        </tr>`
 
         tableList.append(row)
+
+    })
+
+    tableData.DataTable({
+        order:[[0,'desc']],
+        lengthMenu:[5,10,15,20,30,50,100,1000],
 
     });
 }
