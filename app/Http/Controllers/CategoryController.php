@@ -8,11 +8,46 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
 
+    /**
+     * Displays the category page view.
+     *
+     * @return \Illuminate\View\View
+     */
        function CategoryPage(){
          return view('pages.dashboard.category-page');
        }
 
+
+       function CategoryList(Request $request){
+        $user_id=$request->header('id');
+        return Category::where('user_id', $user_id)->get();
+
+       }
+
        
+       function CategoryCreate(Request $request){
+        $user_id=$request->header('id');
+        return Category::where([
+            'name'=>$request->input('name'),
+            'user_id'=>$user_id
+        ]);
+        
+
+       }
+
+       function CategoryDelete(Request $request){
+           $category_id=$request->input('id');
+           $user_id=$request->header('id');
+           return Category::where('id', $category_id)->where('user_id', $user_id)->delete();
+       }
+
+
+
+
+
+       
+
+
 }
         
         
