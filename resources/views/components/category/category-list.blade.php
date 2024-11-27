@@ -12,8 +12,8 @@
             </div>
             <hr class="bg-secondary"/>
             <div class="table-responsive">
-            <table class="table" id="tableData">
-                <thead>
+            <table class="table table-success table-striped table-hover " id="tableData">
+                <thead class="table-light">
                 <tr class="bg-light">
                     <th>No</th>
                     <th>Category</th>
@@ -42,6 +42,9 @@ async function getList(){
     // JQuery Style
     let tableList =$("#tableList");
     let tableData = $("#tableData");
+
+    tableData.DataTable().destroy();
+    tableList.empty();
 
     res.data.forEach(function (item, index){
         let row = `<tr>
